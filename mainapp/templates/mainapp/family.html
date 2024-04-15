@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Семья</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>Семья</h1>
+    </header>
+    <section class="family">
+      <div class="member">
+        <h2>Родственник</h2>
+        <div class="circle" onclick="show_video()"></div>
+      </div>
+    </section>
+    <div class="modal-video">
+        <div class="close-modal" onclick="close_modal()">
+            <img src="{% static 'img/cross.png' %}" alt="">
+        </div>
+      <video
+        src="{% static 'video/video.mp4' %}"
+        poster="{% static 'img/poster.jpg' %}"
+        controls
+      ></video>
+    </div>
+  </body>
+  <script>
+    function show_video() {
+        let modal = document.querySelector('.modal-video')
+        modal.classList.add('active')
+    }
+
+    function close_modal() {
+        let modal = document.querySelector('.modal-video')
+        modal.classList.remove('active')
+    }
+  </script>
+</html>

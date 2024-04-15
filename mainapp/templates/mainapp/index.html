@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Династия</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Проект "Династия"</h1>
+    </header>
+    <section>
+        <div class="enter-family">
+            <h2>Добро пожаловать в семью</h2>
+            <a href="{% url 'main:family' %}">
+                <div class="enter">
+                    Войти
+                </div>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
