@@ -18,9 +18,9 @@
       </div>
     </section>
     <div class="modal-video">
-        <div class="close-modal" onclick="close_modal()">
-            <img src="{% static 'img/cross.png' %}" alt="">
-        </div>
+      <div class="close-modal" onclick="close_modal()">
+        <img src="{% static 'img/cross.png' %}" alt="" />
+      </div>
       <video
         src="{% static 'video/video.mp4' %}"
         poster="{% static 'img/poster.jpg' %}"
@@ -30,13 +30,13 @@
   </body>
   <script>
     function show_video() {
-        let modal = document.querySelector('.modal-video')
-        modal.classList.add('active')
+      let modal = document.querySelector(".modal-video");
+      modal.classList.add("active");
     }
 
     function close_modal() {
-        let modal = document.querySelector('.modal-video')
-        modal.classList.remove('active')
+      let modal = document.querySelector(".modal-video");
+      modal.classList.remove("active");
     }
   </script>
 </html>
